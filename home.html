@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Talent Lens</title>
+  <link rel="icon" href="WhatsApp_Image_2025-05-17_at_1.52.46_PM-removebg-preview.png" type="image/png" sizes="32x32" />
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.png" alt="Talent Lens Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="home.html" class="nav-link"><i class="bi bi-house-door"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"><i class="bi bi-info-circle"></i> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"><i class="bi bi-telephone-outbound"></i> Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link"><i class="bi bi-person-circle"></i> Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container">
+      <marquee behavior="scroll" direction="left" scrollamount="10">
+        Revolutionizing recruitment with AI-powered pre-screening interviews!
+      </marquee>
+    </div>
+  </div>
+
+  <!-- Hero Section with Background Slideshow -->
+  <section class="hero-section">
+    <div class="hero-background">
+      <img src="assets/hero_1.jpg" class="hero-slide active" alt="Interview">
+      <img src="assets/hero_2.jpg" class="hero-slide" alt="Resume">
+      <img src="assets/hero_3.jpg" class="hero-slide" alt="Career Growth">
+      <img src="assets/hero_4.jpg" class="hero-slide" alt="Recruitment">
+      <img src="assets/hero_5.jpg" class="hero-slide" alt="Success">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content animate-fade-in" data-delay="0.1s">
+        <h1>Talent Lens</h1>
+        <p>
+          Talent Lens is an AI-powered software solution designed to streamline and automate the recruitment process. With our pre-screening interview technology, we help employers save time and identify the most suitable candidates quickly. Talent Lens uses intelligent video interviews, voice-to-text conversion, and natural language processing to analyze candidate responses and provide actionable insights to recruiters. It's the future of hiring – fast, fair, and data-driven.
+        </p>
+        <a href="about.html" class="btn-primary-custom">
+          Learn More <i class="fas fa-long-arrow-alt-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Section -->
+  <section class="join-section animate-fade-in" data-delay="0.5s">
+    <div class="container">
+      <h2>Join Talent Lens</h2>
+      <p>Take the next step toward transforming your hiring process or finding your dream job with Talent Lens.</p>
+      
+      <div class="join-cards">
+        <div class="join-card animate-fade-in">
+          <i class="fas fa-user-tie"></i>
+          <h3>For Recruiters</h3>
+          <p>Access our AI-powered tools to streamline your hiring process and find the perfect candidates faster than ever.</p>
+          <a href="recruiter_signup.html" class="btn">Join as Recruiter</a>
+        </div>
+        
+        <div class="join-card animate-fade-in">
+          <i class="fas fa-user-graduate"></i>
+          <h3>For Candidates</h3>
+          <p>Showcase your skills through our innovative interview platform and connect with top employers worldwide.</p>
+          <a href="candidate_signup.html" class="btn">Join as Candidate</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-5 fw-bold">Our Services</h2>
+      <div class="row g-4">
+        <!-- Resume Screening -->
+        <div class="col-md-4">
+          <div class="flip-card animate-fade-in" data-delay="0.1s">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/resume_screening.jpg" alt="Resume Screening">
+                <div class="card-title">Resume Screening</div>
+                <div class="card-line"></div>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  <strong>Resume Screening:</strong><br>
+                  Save time by automatically analyzing resumes to shortlist candidates. Our system matches keywords, experience levels, education, and skills to the job requirements, improving hiring accuracy and reducing manual effort.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Interview -->
+        <div class="col-md-4">
+          <div class="flip-card animate-fade-in" data-delay="0.2s">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/video_interview.jpg" alt="Video Interview">
+                <div class="card-title">Video Interview</div>
+                <div class="card-line"></div>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  <strong>Video Interview:</strong><br>
+                  Conduct live or asynchronous video interviews. Candidates respond to questions via video, and our platform captures expressions, tone, and clarity. Great for assessing communication, confidence, and cultural fit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Report Generation -->
+        <div class="col-md-4">
+          <div class="flip-card animate-fade-in" data-delay="0.3s">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="assets/report_generation.jpg" alt="Report Generation">
+                <div class="card-title">Report Generation</div>
+                <div class="card-line"></div>
+              </div>
+              <div class="flip-card-back">
+                <p>
+                  <strong>Report Generation:</strong><br>
+                  Automatically generate detailed reports that summarize candidate performance, skills match, resume evaluation, and video analysis. Download or share insights with your team to make informed hiring decisions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2>Why Choose Us</h2>
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-4 col-lg-4 animate-fade-in" data-delay="0.1s">
+          <div class="feature-box">
+            <i class="fas fa-briefcase"></i>
+            <h3>Efficient Hiring</h3>
+            <p>Streamline your recruitment process with powerful AI tools.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="col-md-4 col-lg-4 animate-fade-in" data-delay="0.2s">
+          <div class="feature-box">
+            <i class="fas fa-brain"></i>
+            <h3>AI Insights</h3>
+            <p>Analyze candidate data for smarter hiring decisions.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="col-md-4 col-lg-4 animate-fade-in" data-delay="0.3s">
+          <div class="feature-box">
+            <i class="fas fa-globe"></i>
+            <h3>Global Talent Pool</h3>
+            <p>Access candidates from all over the world effortlessly.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 4 -->
+        <div class="col-md-4 col-lg-4 animate-fade-in" data-delay="0.4s">
+          <div class="feature-box">
+            <i class="fas fa-cogs"></i>
+            <h3>Customizable Tools</h3>
+            <p>Tailor your recruitment process to meet your company's needs.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 5 -->
+        <div class="col-md-4 col-lg-4 animate-fade-in" data-delay="0.5s">
+          <div class="feature-box">
+            <i class="fas fa-chart-line"></i>
+            <h3>Detailed Analytics</h3>
+            <p>Measure your hiring success with in-depth reporting tools.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 6 -->
+        <div class="col-md-4 col-lg-4 animate-fade-in" data-delay="0.6s">
+          <div class="feature-box">
+            <i class="fas fa-users"></i>
+            <h3>Seamless Experience</h3>
+            <p>Ensure a smooth process for both recruiters and candidates.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 7 -->
+        <div class="col-md-4 col-lg-4 animate-fade-in" data-delay="0.7s">
+          <div class="feature-box">
+            <i class="fas fa-dollar-sign"></i>
+            <h3>Cost-Effective</h3>
+            <p>Save resources by optimizing your recruitment process.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 8 -->
+        <div class="col-md-4 col-lg-4 animate-fade-in" data-delay="0.8s">
+          <div class="feature-box">
+            <i class="fas fa-expand-arrows-alt"></i>
+            <h3>Scalable Solutions</h3>
+            <p>Adapt to your company's growth with ease.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 9 -->
+        <div class="col-md-4 col-lg-4 animate-fade-in" data-delay="0.9s">
+          <div class="feature-box">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Innovative Approach</h3>
+            <p>Revolutionize hiring with cutting-edge AI technology.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <!-- Quick Links Section -->
+      <div class="quick-links-section">
+        <h4 class="quick-links-heading">Quick Links</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="quick-links">
+              <li><a href="home.html"><i class="bi bi-house-door"></i> Home</a></li>
+              <li><a href="about.html"><i class="bi bi-info-circle"></i> About Us</a></li>
+              <li><a href="contact.html"><i class="bi bi-telephone-outbound"></i> Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="quick-links">
+              <li><a href="login.html"><i class="bi bi-person-circle"></i> Login</a></li>
+              <li><a href="recruiter_signup.html"><i class="fas fa-user-tie"></i> Recruiter Signup</a></li>
+              <li><a href="candidate_signup.html"><i class="fas fa-user-graduate"></i> Candidate Signup</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <h3 class="footer-heading">Follow Us On</h3>
+      <ul class="social-icons">
+        <!-- Facebook -->
+        <li class="icon-content">
+          <a href="https://facebook.com" target="_blank" data-social="facebook">
+            <span class="filled"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.675 0h-21.35C.597 0 0 .6 0 1.333v21.333C0 23.4.597 24 1.325 24h11.494V14.708h-3.13v-3.624h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.714-1.796 1.763v2.31h3.59l-.467 3.624h-3.123V24h6.116C23.403 24 24 23.4 24 22.667V1.333C24 .6 23.403 0 22.675 0z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- Instagram -->
+        <li class="icon-content">
+          <a href="https://instagram.com" target="_blank" data-social="instagram">
+            <span class="filled"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.3 1 .6 1.5 1.1.5.5.8.9 1.1 1.5.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.3.6-.6 1-1.1 1.5-.5.5-.9.8-1.5 1.1-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.3-1-.6-1.5-1.1-.5-.5-.8-.9-1.1-1.5-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.3-.6.6-1 1.1-1.5.5-.5.9-.8 1.5-1.1.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.4 0-4.6.1-1.1.1-1.7.3-2.1.5-.5.2-.8.5-1.2.9-.4.4-.6.7-.9 1.2-.2.4-.4 1-.5 2.1-.1 1.2-.1 1.5-.1 4.6s0 3.4.1 4.6c.1 1.1.3 1.7.5 2.1.2.5.5.8.9 1.2.4.4.7.6 1.2.9.4.2 1 .4 2.1.5 1.2.1 1.5.1 4.6.1s3.4 0 4.6-.1c1.1-.1 1.7-.3 2.1-.5.5-.2.8-.5 1.2-.9.4-.4.6-.7.9-1.2.2-.4.4-1 .5-2.1.1-1.2.1-1.5.1-4.6s0-3.4-.1-4.6c-.1-1.1-.3-1.7-.5-2.1-.2-.5-.5-.8-.9-1.2-.4-.4-.7-.6-1.2-.9-.4-.2-1-.4-2.1-.5-1.2-.1-1.5-.1-4.6-.1zm0 3.8a5.9 5.9 0 1 1 0 11.8 5.9 5.9 0 0 1 0-11.8zm0 9.8a3.9 3.9 0 1 0 0-7.8 3.9 3.9 0 0 0 0 7.8zm5.9-9.9a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- LinkedIn -->
+        <li class="icon-content">
+          <a href="https://linkedin.com" target="_blank" data-social="linkedin">
+            <span class="filled"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 24V7h5v17H0zm7.5-17h4.7v2.2h.1c.7-1.3 2.5-2.6 5.2-2.6 5.6 0 6.6 3.7 6.6 8.6V24h-5v-7.6c0-1.8 0-4.2-2.6-4.2s-3 2-3 4.1V24h-5V7z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- Twitter (X) -->
+        <li class="icon-content">
+          <a href="https://twitter.com" target="_blank" data-social="twitter">
+            <span class="filled"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 1.636h3.358l-7.337 8.386 8.636 12.342h-6.786l-5.3-7.579-6.06 7.579H1.5l7.742-8.957L.75 1.636h6.96l4.768 6.833 5.766-6.833zM16.98 20.584h1.863L7.09 3.454H5.082l11.897 17.13z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p>&copy; 2025 Talent Lens. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="js/home.js"></script>
+
+</body>
+</html>

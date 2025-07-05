@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentLens Interview</title>
+      <link rel="stylesheet" href="css/interview.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="TalentLens Logo" aria-label="TalentLens Logo">
+            <span class="welcome-text">Welcome to TalentLens Interview</span>
+        </div>
+        <div class="header-controls">
+            <button class="btn btn-settings" onclick="toggleSettings()" aria-label="Open settings panel">Settings ▼</button>
+            <button class="btn btn-disconnect" onclick="disconnect()" aria-label="Disconnect from meeting">Disconnect</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="video-section">
+            <div class="video-panel video-main">
+                <div class="video-label">VIDEO</div>
+                <div class="video-loading">
+                    <div class="spinner"></div>
+                    <div>Waiting for video track</div>
+                </div>
+            </div>
+            <div class="video-panel audio-panel">
+                <div class="audio-label">AUDIO</div>
+                <div class="audio-visualizer" id="audioVisualizer">
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                    <div class="audio-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-section">
+            <div class="chat-header">CHAT</div>
+            <div class="chat-messages">
+                <div class="agent-message">
+                    <div class="agent-label">AGENT</div>
+                    <div class="message-text">
+                        Hello! Welcome to our conversation! I'm here to assist you with any questions, topics, or tasks you'd like to discuss. How can I help you today?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" class="chat-input" placeholder="Type a message..." onkeypress="handleChatKeyPress(event)" aria-label="Chat input">
+                <button class="btn btn-send" onclick="sendMessage()" aria-label="Send chat message">SEND</button>
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <div class="control-group">
+                <div class="control-header">INTERVIEW CONTROLS</div>
+                <div class="interview-section">
+                    <button class="btn-next-question" onclick="getNextQuestion()" aria-label="Get next question">🎯 Next Question</button>
+                    <div class="question-display" id="questionDisplay">
+                        <div class="question-placeholder">Click "Next Question" to start interview</div>
+                    </div>
+                    <div class="question-controls">
+                        <button class="btn-play" onclick="playQuestion()" id="playBtn" disabled aria-label="Play question audio">▶️ Play Question</button>
+                        <button class="btn-record" onclick="toggleRecording()" id="recordBtn" disabled aria-label="Start recording">🔴 Start Recording</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="control-header">CAMERA</div>
+                <div class="camera-section">
+                    <button class="cam-button active" onclick="toggleCamera()" id="camButton" aria-label="Toggle camera">📹</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="control-header">MICROPHONE</div>
+                <div class="microphone-section">
+                    <button class="mic-button active" onclick="toggleMic()" id="micButton" aria-label="Toggle microphone">🎤</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="control-header">RECORDING STATUS</div>
+                <div class="recording-status" id="recordingStatus">
+                    <div class="status-indicator">⚪ Ready</div>
+                    <div class="recording-timer" id="recordingTimer">00:00</div>
+                    <div class="current-question-id" id="currentQuestionId">Question ID: -</div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="control-header">THEME</div>
+                <div class="color-palette">
+                    <div class="color-option" style="background: #008f5b" onclick="applyTheme('#008f5b')" aria-label="Select dark green theme"></div>
+                    <div class="color-option" style="background: lightgray" onclick="applyTheme('lightgray')" aria-label="Select green theme"></div>
+                    <div class="color-option" style="background: #ffaa00" onclick="applyTheme('#ffaa00')" aria-label="Select orange theme"></div>
+                    <div class="color-option" style="background: #0088ff" onclick="applyTheme('#0088ff')" aria-label="Select blue theme"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Custom JavaScript -->
+  <script src="js/interview.js"></script>
+</body>
+</html>

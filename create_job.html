@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Job | Talent Lens</title>
+    <link rel="icon" href="WhatsApp_Image_2025-05-17_at_1.52.46_PM-removebg-preview.png" type="image/png" sizes="32x32" />
+    
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/create_job.css">
+</head>
+<body>
+    <!-- Job Creation Section -->
+    <section class="job-section">
+        <div class="container">
+            <div class="job-container animate-fade-in animate-delay-2">
+                <div class="job-header">
+                    <h2>📝 Create a Job</h2>
+                    <p>Fill out the form below to post a new job listing</p>
+                </div>
+                <div class="job-body">
+                    <form id="job-form">
+                        <div class="row mb-4">
+                            <div class="col-md-6 form-group">
+                                <label for="company-name" class="form-label">Company Name <span class="required">*</span></label>
+                                <input type="text" id="company-name" class="form-control" placeholder="Enter company name" required>
+                                <div class="error-message" id="companyNameError">Please enter the company name</div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="job-title" class="form-label">Job Title <span class="required">*</span></label>
+                                <input type="text" id="job-title" class="form-control" placeholder="Enter job title" required>
+                                <div class="error-message" id="jobTitleError">Please enter the job title</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="job-desc" class="form-label">Job Description <span class="required">*</span></label>
+                            <textarea id="job-desc" class="form-control" placeholder="Enter job description" required></textarea>
+                            <div class="error-message" id="jobDescError">Please enter the job description</div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6 form-group">
+                                <label for="job-education" class="form-label">Education Requirement <span class="optional">(Optional)</span></label>
+                                <input type="text" id="job-education" class="form-control" placeholder="e.g., Bachelor's in Computer Science">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="job-experience" class="form-label">Experience Requirement (Years) <span class="optional">(Optional)</span></label>
+                                <input type="number" id="job-experience" class="form-control" min="0" max="50" placeholder="Enter years of experience">
+                                <div class="error-message" id="jobExperienceError">Please enter a valid number of years</div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6 form-group">
+                                <label for="job-skills" class="form-label">Skills Required <span class="required">*</span></label>
+                                <input type="text" id="job-skills" class="form-control" placeholder="e.g., JavaScript, Python, Leadership" required>
+                                <div class="form-text">Separate multiple skills with commas</div>
+                                <div class="error-message" id="jobSkillsError">Please enter at least one skill</div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="job-location" class="form-label">Location <span class="required">*</span></label>
+                                <input type="text" id="job-location" class="form-control" placeholder="Enter job location" required>
+                                <div class="error-message" id="jobLocationError">Please enter the job location</div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6 form-group">
+                                <label for="job-salary" class="form-label">Salary ($) <span class="optional">(Optional)</span></label>
+                                <input type="number" id="job-salary" class="form-control" min="0" placeholder="Enter salary">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="job-type" class="form-label">Job Type <span class="required">*</span></label>
+                                <select id="job-type" class="form-control" required>
+                                    <option value="">Select Job Type</option>
+                                    <option value="Full-Time">Full-Time</option>
+                                    <option value="Part-Time">Part-Time</option>
+                                    <option value="Remote">Remote</option>
+                                    <option value="Internship">Internship</option>
+                                </select>
+                                <div class="error-message" id="jobTypeError">Please select a job type</div>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4">
+                            <div class="col-md-6 form-group">
+                                <label for="job-deadline" class="form-label">Application Deadline <span class="optional">(Optional)</span></label>
+                                <input type="date" id="job-deadline" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="job-email" class="form-label">Contact Email <span class="required">*</span></label>
+                                <input type="email" id="job-email" class="form-control" placeholder="Enter contact email" required>
+                                <div class="error-message" id="jobEmailError">Please enter a valid email address</div>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-briefcase"></i> Post Job
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/create_job.js"></script>
+</body>
+</html>

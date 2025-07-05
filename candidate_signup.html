@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Candidate Sign-Up | Talent Lens</title>
+  <link rel="icon" href="WhatsApp_Image_2025-05-17_at_1.52.46_PM-removebg-preview.png" type="image/png" sizes="32x32" />
+
+  <!-- Bootstrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/candidate_signup.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="assets/logo.png" alt="Talent Lens Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="home.html" class="nav-link"><i class="bi bi-house-door"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link"><i class="bi bi-info-circle"></i> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link"><i class="bi bi-telephone-outbound"></i> Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="nav-link"><i class="bi bi-person-circle"></i> Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <section class="hero-header">
+    <div class="container">
+      <div class="animate-fade-in animate-delay-1">
+        <h1>Join Our Talent Network</h1>
+        <p>Create your candidate profile and connect with top employers worldwide</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signup Section -->
+  <section class="signup-section">
+    <div class="container">
+      <div class="signup-container animate-fade-in animate-delay-2">
+        <div class="signup-header">
+          <h2>Candidate Registration</h2>
+          <p>Fill out the form below to create your account</p>
+        </div>
+        <div class="signup-body">
+          <form id="candidateSignupForm">
+            <!-- Profile Picture Upload -->
+            <div class="profile-picture-upload">
+              <div class="profile-preview-container" id="profilePreviewContainer">
+                <img id="profilePreview" class="profile-preview" alt="Profile Picture">
+                <div class="profile-placeholder" id="profilePlaceholder">
+                  <i class="fas fa-user"></i>
+                </div>
+              </div>
+              <div class="file-upload">
+                <button type="button" class="file-upload-btn" id="profileBtn">
+                  <i class="fas fa-upload"></i> Upload Profile Picture
+                </button>
+                <input type="file" id="profilePicture" accept="image/*">
+              </div>
+              <div class="file-name" id="profileName">No file chosen</div>
+              <div class="form-text">Optional. Maximum file size: 5MB. Formats: JPG, PNG</div>
+            </div>
+
+            <!-- Personal Information -->
+            <div class="section-divider">
+              <span>Personal Information</span>
+            </div>
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" id="fullName" class="form-control" placeholder="Enter your full name" required>
+                <div class="error-message" id="fullNameError">Please enter your full name</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+              </div>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number" required>
+                <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="education" class="form-label">Highest Qualification</label>
+                <input type="text" id="education" class="form-control" placeholder="e.g., Bachelor's in Computer Science" required>
+                <div class="error-message" id="educationError">Please enter your highest qualification</div>
+              </div>
+            </div>
+
+            <!-- Professional Information -->
+            <div class="section-divider">
+              <span>Professional Information</span>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label for="experience" class="form-label">Years of Experience</label>
+                <input type="number" id="experience" class="form-control" min="0" max="50" placeholder="Enter years of experience" required>
+                <div class="error-message" id="experienceError">Please enter a valid number of years</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="skills" class="form-label">Skills</label>
+                <input type="text" id="skills" class="form-control" placeholder="e.g., JavaScript, Python, Project Management" required>
+                <div class="form-text">Separate multiple skills with commas</div>
+                <div class="error-message" id="skillsError">Please enter at least one skill</div>
+              </div>
+            </div>
+
+            <!-- Profile Media -->
+            <div class="section-divider">
+              <span>Profile Media</span>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-md-12 mb-3">
+                <label for="resume" class="form-label">Resume/CV</label>
+                <div class="file-upload">
+                  <button type="button" class="file-upload-btn w-100" id="resumeBtn">
+                    <i class="fas fa-file-pdf"></i> Upload Resume
+                  </button>
+                  <input type="file" id="resume" accept=".pdf,.doc,.docx" required>
+                </div>
+                <div class="file-name" id="resumeName">No file chosen</div>
+                <div class="form-text">Maximum file size: 10MB. Formats: PDF, DOC, DOCX</div>
+                <div class="error-message" id="resumeError">Please upload your resume</div>
+              </div>
+            </div>
+
+            <!-- Account Security -->
+            <div class="section-divider">
+              <span>Account Security</span>
+            </div>
+
+            <div class="row mb-4">
+              <div class="col-md-6 mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="password-container">
+                  <input type="password" id="password" class="form-control" placeholder="Create a strong password" required>
+                  <button type="button" class="password-toggle" id="togglePassword">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+                <div class="password-strength">
+                  <div class="password-strength-bar" id="passwordStrengthBar"></div>
+                </div>
+                <div class="password-strength-text" id="passwordStrengthText">Password strength</div>
+                <div class="error-message" id="passwordError">Password must be at least 8 characters</div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <div class="password-container">
+                  <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm your password" required>
+                  <button type="button" class="password-toggle" id="toggleConfirmPassword">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+                <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+              </div>
+            </div>
+
+            <!-- Terms and Conditions -->
+            <div class="mb-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                <label class="form-check-label" for="termsCheck">
+                  I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
+                </label>
+                <div class="error-message" id="termsError">You must agree to the terms and conditions</div>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+              <button type="submit" class="submit-btn">
+                <i class="fas fa-user-plus"></i> Create Account
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <!-- Quick Links Section -->
+      <div class="quick-links-section">
+        <h4 class="quick-links-heading">Quick Links</h4>
+        <div class="row">
+          <div class="col-md-6">
+            <ul class="quick-links">
+              <li><a href="home.html"><i class="bi bi-house-door"></i> Home</a></li>
+              <li><a href="about.html"><i class="bi bi-info-circle"></i> About Us</a></li>
+              <li><a href="contact.html"><i class="bi bi-telephone-outbound"></i> Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="quick-links">
+              <li><a href="login.html"><i class="bi bi-person-circle"></i> Login</a></li>
+              <li><a href="recruiter_signup.html"><i class="fas fa-user-tie"></i> Recruiter Signup</a></li>
+              <li><a href="candidate_signup.html"><i class="fas fa-user-graduate"></i> Candidate Signup</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <h3 class="footer-heading">Follow Us On</h3>
+      <ul class="social-icons">
+        <!-- Facebook -->
+        <li class="icon-content">
+          <a href="https://www.facebook.com" target="_blank" data-social="facebook">
+            <span class="filled"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.675 0h-21.35C.597 0 0 .6 0 1.333v21.333C0 23.4.597 24 1.325 24h11.494V14.708h-3.13v-3.624h3.13V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.464.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.714-1.796 1.763v2.31h3.59l-.467 3.624h-3.123V24h6.116C23.403 24 24 23.4 24 22.667V1.333C24 .6 23.403 0 22.675 0z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- Instagram -->
+        <li class="icon-content">
+          <a href="https://www.instagram.com" target="_blank" data-social="instagram">
+            <span class="filled"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.3 1 .6 1.5 1.1.5.5.8.9 1.1 1.5.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.3.6-.6 1-1.1 1.5-.5.5-.9.8-1.5 1.1-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5-.6-.3-1-.6-1.5-1.1-.5-.5-.8-.9-1.1-1.5-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.3-.6.6-1 1.1-1.5.5-.5.9-.8 1.5-1.1.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.4 0-4.6.1-1.1.1-1.7.3-2.1.5-.5.2-.8.5-1.2.9-.4.4-.6.7-.9 1.2-.2.4-.4 1-.5 2.1-.1 1.2-.1 1.5-.1 4.6s0 3.4.1 4.6c.1 1.1.3 1.7.5 2.1.2.5.5.8.9 1.2.4.4.7.6 1.2.9.4.2 1 .4 2.1.5 1.2.1 1.5.1 4.6.1s3.4 0 4.6-.1c1.1-.1 1.7-.3 2.1-.5.5-.2.8-.5 1.2-.9.4-.4.6-.7.9-1.2.2-.4.4-1 .5-2.1.1-1.2.1-1.5.1-4.6s0-3.4-.1-4.6c-.1-1.1-.3-1.7-.5-2.1-.2-.5-.5-.8-.9-1.2-.4-.4-.7-.6-1.2-.9-.4-.2-1-.4-2.1-.5-1.2-.1-1.5-.1-4.6-.1zm0 3.8a5.9 5.9 0 1 1 0 11.8 5.9 5.9 0 0 1 0-11.8zm0 9.8a3.9 3.9 0 1 0 0-7.8 3.9 3.9 0 0 0 0 7.8zm5.9-9.9a1.4 1.4 0 1 1-2.8 0 1.4 1.4 0 0 1 2.8 0z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- LinkedIn -->
+        <li class="icon-content">
+          <a href="https://linkedin.com" target="_blank" data-social="linkedin">
+            <span class="filled"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 24V7h5v17H0zm7.5-17h4.7v2.2h.1c.7-1.3 2.5-2.6 5.2-2.6 5.6 0 6.6 3.7 6.6 8.6V24h-5v-7.6c0-1.8 0-4.2-2.6-4.2s-3 2-3 4.1V24h-5V7z"/>
+            </svg>
+          </a>
+        </li>
+
+        <!-- Twitter (X) -->
+        <li class="icon-content">
+          <a href="https://www.twitter.com" target="_blank" data-social="twitter">
+            <span class="filled"></span>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 1.636h3.358l-7.337 8.386 8.636 12.342h-6.786l-5.3-7.579-6.06 7.579H1.5l7.742-8.957L.75 1.636h6.96l4.768 6.833 5.766-6.833zM16.98 20.584h1.863L7.09 3.454H5.082l11.897 17.13z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p>© 2025 Talent Lens. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="js/candidate_signup.js"></script>
+</body>
+</html>

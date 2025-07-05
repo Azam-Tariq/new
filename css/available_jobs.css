@@ -1,0 +1,166 @@
+
+    /* Base Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Job Listings Section */
+    .jobs-section {
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .jobs-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('data:image/svg+xml,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><rect width="20" height="20" fill="none"/><circle cx="3" cy="3" r="0.5" fill="%23000" opacity="0.1"/><circle cx="13" cy="13" r="0.5" fill="%23000" opacity="0.1"/></svg>');
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .jobs-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .jobs-header {
+      background: #000;
+      color: #ffc107;
+      padding: 30px;
+      text-align: center;
+      border-radius: 15px 15px 0 0;
+      position: relative;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    }
+
+    .jobs-header h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .jobs-header p {
+      opacity: 0.9;
+      margin-bottom: 0;
+      color: #fff;
+    }
+
+    .job-card {
+      background: #fff;
+      border-radius: 0;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+      color: #000;
+    }
+
+    .job-company {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 12px;
+    }
+
+    .job-desc {
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .job-details {
+      font-size: 0.9rem;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .btn-group {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .submit-btn {
+      background: #000;
+      color: #ffc107;
+      border: none;
+      padding: 10px 16px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      background: #222;
+    }
+
+    .submit-btn i {
+      margin-right: 8px;
+    }
+
+    /* Animation Keyframes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .animate-delay-1 {
+      animation-delay: 0.1s;
+    }
+
+    .animate-delay-2 {
+      animation-delay: 0.2s;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 991px) {
+      .jobs-section {
+        padding: 60px 0;
+      }
+      .jobs-header {
+        padding: 25px;
+      }
+      .job-card {
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .jobs-section {
+        padding: 40px 0;
+      }
+      .job-card {
+        padding: 10px;
+      }
+    }
+  
